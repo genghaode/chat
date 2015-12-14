@@ -1,0 +1,19 @@
+<div class="col-md-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">聊天室</div>
+		<div class="panel-body">
+			<div class="list-group" scroll-to-bottom style="height: 300px; overflow-y: auto">
+				<div class="list-group-item" ng-repeat="message in room.messages track by $index">
+					{{message.content}}
+				</div>
+			</div>
+		</div>
+		<div class="panel-footer">
+			<div class="form" ng-controller="MessageSendCtrl">
+				<div class="form-group">
+					<textarea ng-model="newMessage" enter-break="createMessage()" placeholder="回车发送消息" class="form-control"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
