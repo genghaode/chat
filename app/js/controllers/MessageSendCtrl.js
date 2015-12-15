@@ -4,6 +4,7 @@ angular.module('chat').controller('MessageSendCtrl', ['$rootScope', '$scope', 's
 		if($scope.newMessage){
 			socket.emit('createMessage', {
 				content: $scope.newMessage,
+				creator: $rootScope.me,
 				createAt: new Date()
 			});
 			$scope.newMessage = '';
