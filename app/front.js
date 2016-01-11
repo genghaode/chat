@@ -10,6 +10,8 @@ angular.module('chat', ['ngRoute', 'angularMoment']).config(function($locationPr
 	}).when('/reg', {
 		templateUrl: 'pages/reg.html',
 		controller: 'RegCtrl'
+	}).when('/home', {
+		templateUrl: 'pages/home.html'
 	}).otherwise({
 		redirectTo: '/'
 	});

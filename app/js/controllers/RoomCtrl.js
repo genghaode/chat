@@ -8,4 +8,8 @@ angular.module('chat').controller('RoomCtrl', function($scope, socket){
 	socket.on('message.add', function(message){
 		$scope.room.messages.push(message);
 	});
+	//scope销毁时移除socket的所有注册的监听
+	// $scope.$on('$destroy',function(){
+ //    socket.clear();
+ //  });
 });
